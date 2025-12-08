@@ -1,0 +1,77 @@
+int lenchars(string text){
+	int n = 0;
+	for (char ch: text){
+		n++;
+	}
+	return n;
+}
+
+class BankAccount{
+	int id;
+	string name;
+	double balance;
+	
+	BankAccount(){
+		this->id = 0;
+		this->name = " ";
+		this->balance = 0;
+	}
+	BankAccount(int id, string name, double balance){
+		this->id = _id;
+		this->name = _name;
+		this->balance = _balance;
+	}
+	
+	void setId(int _id){
+		this->id = _id;
+	}
+	int getId(){
+		return this->id;
+	}
+	void setName(string _name){
+		this->name = _name;
+	}
+	string getName(){
+		return this->name;
+	}
+	void withdraw(double n){
+		if (this->balance <= 0){
+			cout << "Your balance is empty" << endl;
+		}
+		else if (this->balance - n < 0){
+			cout << "Your balance is not enough for this withdrawal. Please re-enter the balance" << endl;
+		}
+		else {
+			this->balance -= n;
+			cout << "You have withdrawed " << n << "EGP" << endl;
+			cout << "Your current balance is " << this->balance << " EGP" << endl;
+		}
+	}
+	
+	void deposit(int n){
+		this->balance += n;
+		cout << "Added " << n << "EGP to your account" << endl;
+		cout << "Your current balance is " << this->balance << " EGP" << endl;
+	}
+	
+	void print(){
+		cout << "id: " << this->id << endl;
+		cout << "name: " << this->name << endl;
+		cout << "balance: " << this->balance << endl;
+	}
+}
+
+int n_primes(int x){
+	int n = 0;
+	for (int i=2; i<=x; i++){
+		for (int j=2; j<=i; j++){
+			if (i != j && i % j == 0){
+				continue;
+			}
+			else {
+				n++;
+			}
+		}
+	}
+	return n;
+}

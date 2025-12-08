@@ -1,0 +1,14 @@
+{
+    "student_queue4": {
+        "size": 3,
+        "items": []
+    },
+    "tickets_queue5": {
+        "size": 3,
+        "items": [
+            1,
+            2,
+            3
+        ]
+    }
+}
